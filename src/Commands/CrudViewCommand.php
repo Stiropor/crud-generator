@@ -328,7 +328,7 @@ class CrudViewCommand extends Command
         }
 
         foreach ($this->formFields as $item) {
-            $this->formFieldsHtml .= $this->createField($item);
+            $this->formFieldsHtml .= $this->createField($item) ."\n";
         }
 
         $i = 0;

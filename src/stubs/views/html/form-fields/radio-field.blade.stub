@@ -1,6 +1,8 @@
-<div class="radio">
-    <label><input name="%%itemName%%" type="radio" value="1" {{ (isset($%%crudNameSingular%%) && 1 == $%%crudNameSingular%%->%%itemName%%) ? 'checked' : '' }}> Yes</label>
+<div class="custom-control custom-radio">
+	<input name="%%itemName%%" id="%%itemName%%-1" type="radio" value="1" class="custom-control-input" {{ (isset($%%crudNameSingular%%) && 1 == $%%crudNameSingular%%->%%itemName%%) ? 'checked' : '' }}>
+    <label for="%%itemName%%-1" class="custom-control-label">Yes</label>
 </div>
-<div class="radio">
-    <label><input name="%%itemName%%" type="radio" value="0" @if (isset($%%crudNameSingular%%)) {{ (0 == $%%crudNameSingular%%->%%itemName%%) ? 'checked' : '' }} @else {{ 'checked' }} @endif> No</label>
+<div class="custom-control custom-radio">
+	<input name="%%itemName%%" id="%%itemName%%-0" type="radio" value="0" class="custom-control-input" @if (isset($%%crudNameSingular%%)) {{ (0 == $%%crudNameSingular%%->%%itemName%%) ? 'checked' : '' }} @else {{ 'checked' }} @endif>
+    <label for="%%itemName%%-0" class="custom-control-label">No</label>
 </div>
